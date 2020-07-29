@@ -1,0 +1,60 @@
+<nav class="navbar navbar-dark bg-dark justify-content-start">
+	<button class="navbar-toggler" type="button" (click)="showSidebar = !showSidebar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="navbar-brand px-2">Angular Test Bed</div>
+</nav>
+
+<div class="wrapper">
+	<nav id="sidebar" class="bg-light text-dark p-3" [ngClass]="{'active': showSidebar}">
+		<h3>
+			<fa-icon class="pr-2" [icon]="faNewspaper"></fa-icon>
+			Article Demos
+		</h3>
+		<ul class="nav flex-column nav-pills">
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/smart-dumb']" routerLinkActive="active">#1 - Smart / Dumb</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/observables']" routerLinkActive="active">#2 - Observables</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/async']" routerLinkActive="active">#3 - Async</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/content-projection']" routerLinkActive="active">
+					#4 - Content Projection
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/component-children']" routerLinkActive="active">
+					#5 - View / Content Child
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/dynamic-creation']" routerLinkActive="active">
+					#6 - Dynamic Component Creation
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/component-scope']" routerLinkActive="active">#7 - Component Scope</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/control-value-accessor']" routerLinkActive="active">
+					#8/9 - Control Value Accessor / Sub Forms
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/router-reuse']" routerLinkActive="active">#10 - Router Reuse</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/component-testing']" routerLinkActive="active">#11 - Component Testing</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="content" class="container-fluid p-3">
+		<router-outlet></router-outlet>
+	</div>
+
+</div>

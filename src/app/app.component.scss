@@ -1,0 +1,19 @@
+$sidebar-width: 300px;
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+#sidebar {
+	min-width: $sidebar-width;
+	max-width: $sidebar-width;
+	margin-left: -$sidebar-width;
+	min-height: 100vh;
+	transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+}
+
+#sidebar.active {
+	margin-left: 0;
+}
